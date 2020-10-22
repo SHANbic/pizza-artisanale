@@ -1,17 +1,44 @@
-const dotenv = require('dotenv')
+const dotenv = require("dotenv")
 
-if (process.env.NODE_ENV !== 'production') {
+if (process.env.NODE_ENV !== "production") {
   dotenv.config()
 }
 
 module.exports = {
   siteMetadata: {
-    title: `Gatsby Starter Cafe`,
-    description: `  `,
-    author: `Cristiano Crolla`,
+    title: `pizza artisanale 77`,
+    description: `Les meilleures pizzas artisanales sur Melun - Vert Saint Denis, 77 Seine et Marne`,
+    author: `Pierre Lambert`,
+    author_website: "https://github.com/shanbic",
   },
   plugins: [
-    `gatsby-plugin-react-helmet`,
+    {
+      resolve: `gatsby-plugin-prefetch-google-fonts`,
+      options: {
+        fonts: [
+          {
+            family: `Comic Neue`,
+            variants: [`400`, `700`],
+          },
+          {
+            family: `Fredericka the Great`,
+            variants: [`400`],
+          },
+          {
+            family: `Tangerine`,
+            variants: [`400`],
+          },
+          {
+            family: `Roboto`,
+            variants: [`400`],
+          },
+          {
+            family: `Open Sans`,
+            variants: [`400`],
+          },
+        ],
+      },
+    },
     {
       resolve: `gatsby-source-filesystem`,
       options: {
@@ -19,8 +46,11 @@ module.exports = {
         path: `${__dirname}/src/images`,
       },
     },
+    `gatsby-plugin-react-helmet`,
     `gatsby-transformer-sharp`,
     `gatsby-plugin-sharp`,
+    `gatsby-plugin-offline`,
+    `gatsby-source-fontawesome`,
     {
       resolve: `gatsby-plugin-manifest`,
       options: {
@@ -44,7 +74,7 @@ module.exports = {
     {
       resolve: `gatsby-source-instagram`,
       options: {
-        username: `kelvinpocketcafe`, // Your Instagram
+        username: `pizzaartisanale`,
       },
     },
     {
@@ -52,15 +82,6 @@ module.exports = {
       options: {
         pathToConfigModule: `src/utils/typography`,
       },
-    },
-    {
-      resolve: 'gatsby-plugin-react-leaflet',
-      options: {
-        linkStyles: true // (default: true) Enable/disable loading stylesheets via CDN
-      }
     }
-    // this (optional) plugin enables Progressive Web App + Offline functionality
-    // To learn more, visit: https://gatsby.dev/offline
-    // `gatsby-plugin-offline`,
   ],
 }

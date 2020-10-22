@@ -2,8 +2,13 @@
 * COLOURS *
 ***********/
 
-$green: #14302F;
-$background: #f7f2ea;
+$primary-bg-color: #A81F21;
+$secondary-bg-color: floralwhite;
+
+$dark-text: #111;
+$light-text: floralwhite;
+
+$golden: #fecb4c;
 
 /*************
 * FONT SIZES *
@@ -17,3 +22,14 @@ $ml-size: 26px;
 $l-size: 32px;
 $xl-size: 42px;
 $xxl-size: 54px;
+$xxxl-size: 70px;
+
+
+/*************
+*BREAK POINTS*
+*************/
+$xl-screen: 1130px;
+$lg-screen: 892px;
+$md-screen: 668px;
+$sm-screen: 520px;
+$xs-screen: 330px;

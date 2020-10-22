@@ -1,53 +1,91 @@
+.cool-link {
+  color: $golden;
+  display: inline-block;
+  text-decoration: none;
+  transform: skewX(-0deg);
+  transition: transform 0.2s cubic-bezier(0.075, 0.82, 0.165, 1);
+  &:hover {
+    transform: skewX(-10deg);
+  }
+  &::after {
+    content: "";
+    display: block;
+    width: 74px;
+    height: 2px;
+    background: $golden;
+    transition: width 0.2s cubic-bezier(0.075, 0.82, 0.165, 1);
+    @media screen and (max-width: $md-screen) {
+      width: 47px;
+      height: 1px;
+    }
+    @media screen and (max-width: $sm-screen) {
+      width: 42px;
+    }
+    @media screen and (max-width: $xs-screen) {
+      width: 28px;
+    }
+  }
+  &:hover::after {
+    width: 100%;
+  }
+}
 .insta {
   margin-top: 60px;
 
   h2 {
     margin-bottom: 0;
+    color: $light-text;
+    font-size: $l-size;
+    @media screen and (max-width: $md-screen) {
+      font-size: $ms-size;
+    }
+    @media screen and (max-width: $sm-screen) {
+      font-size: $m-size;
+      text-align: center;
+    }
+    @media screen and (max-width: $xs-screen) {
+      font-size: $s-size;
+    }
   }
-  span {
+  a {
+    color: $golden;
+    text-decoration: none;
+    display: inline-block;
+  }
 
-  }
   .insta-posts {
     list-style-type: none;
     margin: 30px 0 90px;
     display: grid;
     justify-content: center;
     gap: 20px;
-    @media screen and (min-width: 630px) {
+    grid-template-rows: auto;
+    @media screen and (min-width: $md-screen) {
       grid-template-columns: repeat(2, 280px);
-      grid-template-rows: auto;
     }
-    @media screen and (min-width: 1024px) {
+    @media screen and (min-width: $lg-screen) {
       grid-template-columns: repeat(3, 280px);
-      grid-template-rows: repeat(2, 280px);
-    }
-    
-    li:nth-child(4) {
-      display: none;
-      @media screen and (min-width: 630px) {
-        display: block;
-      }
     }
 
-    li:nth-child(5) {
-      display: none;
-      @media screen and (min-width: 1024px) {
-        display: block;
+    @media screen and (max-width: $md-screen) {
+      margin-top: 15px;
+      margin-bottom: 30px;
+    }
+    @media screen and (max-width: $md-screen) {
+      li:nth-child(4),
+      li:nth-child(5),
+      li:nth-child(6) {
+        display: none;
       }
     }
-
-    li:nth-child(6) {
-      display: none;
-      @media screen and (min-width: 1024px) {
-        display: block;
-      }
-    }
-
     .insta-post {
       position: relative;
       height: 280px;
       width: 280px;
       margin: 0;
+      & > div {
+        box-shadow: 2px 5px 10px black;
+      }
 
       .overlay {
         position: absolute;
@@ -59,7 +97,7 @@
         width: 100%;
         opacity: 0;
         transition: 0.5s ease-out;
-        background-color: $green;
+        background-color: #111;
         display: flex;
         align-items: center;
         justify-content: center;
@@ -67,11 +105,11 @@
 
         .icon {
           height: 25px;
-          color: #fff;
+          color: $light-text;
           margin: 0;
         }
         .text {
-          color: #fff;
+          color: $light-text;
           font-size: 25px;
           padding: 0 10px;
         }
@@ -79,7 +117,7 @@
     }
 
     .insta-post:hover .overlay {
-      opacity: 0.8  ;
+      opacity: 0.7;
     }
   }
 }

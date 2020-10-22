@@ -1,4 +1,4 @@
-import React from 'react'
+/* import React from 'react'
 import { useStaticQuery, graphql } from 'gatsby'
 
 const HotDrinks = () => {
@@ -45,4 +45,4 @@ const HotDrinks = () => {
   )
 }
 
-export default HotDrinks;
+export default HotDrinks; */

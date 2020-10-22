@@ -1,14 +1,159 @@
-main {
-  background-color: $background;
+::selection {
+  background-color: rgba($golden, 0.7);
+}
+
+@keyframes pulse {
+  0% {
+    transform: scale(0.9);
+  }
+  70% {
+    box-shadow: 0 0 0 15px rgba(red, 0);
+    transform: scale(1);
+  }
+  100% {
+    box-shadow: 0 0 0 0 rgba(red, 0);
+    transform: scale(0.9);
+  }
+}
+
+.pulse-button {
+  width: 10px;
+  height: 10px;
+  display: inline-block;
+  font-weight: light;
+  margin-right: 8px;
+  border-radius: 50%;
+  cursor: pointer;
+  animation: pulse 1s infinite;
+  &.green {
+    background: limegreen;
+    box-shadow: 0 0 0 0 rgba(limegreen, 0.5);
+  }
+  &.red {
+    background: red;
+    box-shadow: 0 0 0 0 rgba(red, 0.5);
+  }
+  @media screen and (max-width: $sm-screen) {
+    width: 6px;
+    height: 6px;
+    margin-right: 5px;
+  }
 }
 
 .hero {
-  width: 100%;
-  height: 100vh;
+  position: relative;
+  .open {
+    position: absolute;
+    width: 50%;
+    z-index: 10;
+    height: 42px;
+    text-indent: 95px;
+    top: 23px;
+    left: 3px;
+    background-color: $primary-bg-color;
+    p:first-child {
+      margin: 0;
+      position: relative;
+      top: -3px;
+      color: $light-text;
+    }
 
-  .hero-image {
-    height: 100%;
+    p:last-child {
+      text-shadow: 1px 1px 1px black;
+      margin: 0;
+      position: relative;
+      top: -9px;
+      a {
+        color: $golden;
+        text-decoration: none;
+      }
+    }
+    @supports (clip-path: polygon(0 0)) or (-webkit-clip-path: polygon(0 0)) {
+      -webkit-clip-path: polygon(0 0, 100% 0, 100% 75vh, 0 100%);
+      clip-path: polygon(0 0, 220px 0, 250px 42px, 0 42px);
+    }
+    @media screen and (max-width: $sm-screen) {
+      text-indent: 55px;
+      line-height: 2.1;
+      width: 155px;
+      font-size: $xs-size;
+      height: 26px;
+      top: 18px;
+      left: 3px;
+      @supports (clip-path: polygon(0 0)) or (-webkit-clip-path: polygon(0 0)) {
+        -webkit-clip-path: polygon(0 0, 100% 0, 100% 75vh, 0 100%);
+        clip-path: polygon(0 0, 125px 0, 155px 42px, 0 42px);
+      }
+      p:last-child {
+        top: -14px;
+      }
+    }
+  }
+  .logo {
+    img {
+      width: 75px;
+      height: 75px;
+      margin: 0;
+      top: 8px;
+      left: 8px;
+      border-radius: 50%;
+      position: absolute;
+      z-index: 100;
+      box-shadow: 1px 1px 1px black;
+      @media screen and (max-width: $sm-screen) {
+        width: 45px;
+        height: 45px;
+      }
+    }
+  }
+
+  .title {
+    position: absolute;
+    top: 0;
+    z-index: 1;
     width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100%;
+    h1 {
+      font-family: "Fredericka the Great";
+      font-size: $xxxl-size;
+      text-align: center;
+      color: $light-text;
+      margin: 0;
+      text-shadow: 2px 2px 2px black;
+      @media screen and (max-width: $xl-screen) {
+        font-size: $xxl-size;
+      }
+      @media screen and (max-width: $lg-screen) {
+        font-size: $xl-size;
+        padding: 0 25px;
+      }
+      @media screen and (max-width: $md-screen) {
+        font-size: $l-size;
+      }
+      @media screen and (max-width: $sm-screen) {
+        font-size: $ml-size;
+        padding: 0 10px;
+      }
+      /* @media screen and (max-width: $xs-screen) {
+        font-size: $ml-size;
+      } */
+      @media screen and (max-width: $xs-screen) {
+        font-size: $m-size;
+      }
+    }
+  }
+  &:after {
+    content: "";
+    display: block;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.4);
   }
 }
 
@@ -18,40 +163,104 @@ h2 {
   }
 }
 
+.advertising {
+  background-color: #f6ef32;
+  padding: 10px 0;
+
+  p {
+    color: $dark-text;
+    font-weight: bold;
+    font-size: $l-size;
+    text-align: center;
+    margin-bottom: 0;
+    text-transform: uppercase;
+    a {
+      color: inherit;
+      text-decoration: none;
+    }
+  }
+
+  p:nth-child(1) {
+    font-size: $xl-size;
+  }
+
+  p:nth-child(2) {
+    font-size: $ml-size;
+  }
+
+  p:nth-child(3) {
+    font-size: $xxl-size;
+  }
+  @media screen and (max-width: $sm-screen) {
+    p:nth-child(1) {
+      font-size: $l-size;
+    }
+
+    p:nth-child(2) {
+      font-size: $ms-size;
+    }
+
+    p:nth-child(3) {
+      font-size: $xl-size;
+    }
+  }
+  @media screen and (max-width: $xs-screen) {
+    p:nth-child(1) {
+      font-size: $ml-size;
+    }
+
+    p:nth-child(2) {
+      font-size: $s-size;
+    }
+
+    p:nth-child(3) {
+      font-size: $l-size;
+    }
+  }
+}
+
 .container {
-  width: 90%;
-  max-width: 1200px;
+  padding: 25px;
   display: flex;
   flex-direction: column;
   margin: 0 auto;
-  @media screen and (min-width: 1024px) {
-    width: 80%;
-  }
+  background: url("../images/blackboard-min.jpg");
 
-  .description{
+  .title {
     text-align: center;
-    font-size: $ms-size;
-    padding: 80px 20px;
+    font-family: "Comic Neue";
+    font-size: $ml-size;
+    color: $light-text;
+    padding: 30px 30px;
     @media screen and (min-width: 768px) {
-      padding: 100px 120px;
+      padding: 40px 50px;
+      font-size: $l-size;
     }
     @media screen and (min-width: 1024px) {
-      padding: 120px 140px;
+      padding: 50px 60px;
+      font-size: $xl-size;
     }
   }
-  .gallery-grid {
+  /* .gallery-grid {
+    img {
+      border-radius: 5px;
+    }
     display: grid;
     justify-content: center;
-    grid-template-areas: 
+    grid-template-areas:
       "img1"
-      "img2";
+      "img2"
+      "img3";
     grid-template-columns: 300px;
-    grid-template-rows: repeat(2, 250px);
+    grid-template-rows: repeat(3, 250px);
     gap: 20px;
+    img {
+      box-shadow: 10px 10px 10px white;
+    }
     @media screen and (min-width: 640px) {
-      grid-template-areas: 
-      "img1 img3"
-      "img2 img3";
+      grid-template-areas:
+        "img1 img3"
+        "img2 img3";
       grid-template-columns: 1fr 1.5fr;
       grid-template-rows: repeat(2, 300px);
     }
@@ -72,49 +281,82 @@ h2 {
       height: 100%;
       object-fit: cover;
       grid-area: img3;
-      display: none;
-      @media screen and (min-width: 640px) {
-        display: block;
-      }
     }
-  }
-  .about-grid {
-    margin-top: 60px;
-    display: grid;
-    grid-template-columns: 1fr;
-    grid-template-rows: repeat(2, auto);
-    grid-template-areas: 
-    "h2"
-    "p";
-    @media screen and (min-width: 640px) {
-      grid-template-columns: 1fr 1.5fr;
-      grid-template-rows: repeat(2, auto);
-      grid-template-areas: 
-    "h2 ."
-    ". p";
-    margin-top: 80px;
-    }
-    h2 {
-      grid-area: h2;
-      @media screen and (min-width: 640px) {
+  } */
+  .about {
+    display: flex;
+    align-items: center;
+    background-color: rgba(0, 0, 0, 0.4);
+    border-radius: 2px;
+    padding: 30px;
+    &-text {
+      flex-basis: 50%;
+      padding-right: 30px;
+      text-align: center;
+      color: $light-text;
+      p {
         margin-bottom: 0;
-        text-align: end;
+        font-family: "Open Sans";
+        font-size: $ms-size;
+      }
+      h2 {
+        font-family: "Tangerine";
+        font-size: $xxxl-size;
+        color: $golden;
       }
     }
-    p {
-      grid-area: p;
+    &-image {
+      flex-basis: 50%;
+      background: white;
+      padding: 10px;
+      img {
+        margin-bottom: 0;
+        height: 100%;
+      }
+    }
+    @media screen and (max-width: $lg-screen) {
+      &-text {
+        p {
+          font-size: $sm-size;
+        }
+        h2 {
+          font-size: $xxl-size;
+          margin-bottom: 0px;
+        }
+      }
+    }
+
+    @media screen and (max-width: $md-screen) {
+      flex-direction: column;
+      &-text {
+        padding-right: 0;
+      }
+      &-image {
+        width: 100%;
+        margin-top: 20px;
+      }
+    }
+    @media screen and (max-width: $sm-screen) {
+      &-text {
+        p {
+          font-size: $s-size;
+        }
+        h2 {
+          font-size: $xl-size;
+        }
+      }
     }
   }
 }
 .parallax {
-  background-image: url('../images/coffee-landscape.jpg');
+  background-image: url("");
   background-attachment: fixed;
   background-position: 60% 50%;
   background-repeat: no-repeat;
   background-size: cover;
   height: 200px;
   margin: 80px 0;
-  @media screen and (min-width:1024px) {
+  @media screen and (min-width: 1024px) {
     height: 400px;
   }
 }
