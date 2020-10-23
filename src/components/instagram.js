@@ -1,4 +1,4 @@
-import React from "react"
+/* import React from "react"
 import { useStaticQuery, graphql } from "gatsby"
 import Img from "gatsby-image"
 
@@ -29,7 +29,11 @@ const Instagram = () => {
     <div className="insta">
       <h2>
         Suivez notre flux Instagram{" "}
-        <a href={`https://www.instagram.com/${instaPosts[0].node.username}/`} target="_blank" rel="noreferrer">
+        <a
+          href={`https://www.instagram.com/${instaPosts[0].node.username}/`}
+          target="_blank"
+          rel="noreferrer"
+        >
           @<span className="cool-link">{instaPosts[0].node.username}</span>
         </a>
       </h2>
@@ -66,3 +70,4 @@ const Instagram = () => {
 }
 
 export default Instagram
+ */
