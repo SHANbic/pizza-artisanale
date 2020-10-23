@@ -5,7 +5,7 @@ import SEO from "../components/seo"
 import { graphql } from "gatsby"
 import Img from "gatsby-image"
 import Menu from "../components/menu/menu"
-// import Instagram from "../components/instagram"
+import Instagram from "../components/instagram"
 import GoogleMap from "../components/googleMap"
 
 const IndexPage = ({ data }) => {
@@ -103,7 +103,7 @@ const IndexPage = ({ data }) => {
       </div>
       <section className="container">
         <Menu />
-      {/*   <Instagram /> */}
+        <Instagram />
       </section>
       {typeof window !== "undefined" && <GoogleMap />}
     </Layout>
