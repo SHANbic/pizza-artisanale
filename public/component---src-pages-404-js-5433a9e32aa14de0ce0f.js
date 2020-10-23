@@ -1,0 +1,2 @@
+(window.webpackJsonp=window.webpackJsonp||[]).push([[5],{w2l6:function(e,a,n){"use strict";n.r(a);var t=n("q1tI"),l=n.n(t),r=n("Bl7J"),c=n("vrFN");a.default=function(){return l.a.createElement(r.a,null,l.a.createElement(c.a,{title:"404"}),l.a.createElement("h1",null,"PAs de pizza par ici!"),l.a.createElement("a",{href:"/"},"Revenir à la page d'accueil"))}}}]);
+//# sourceMappingURL=component---src-pages-404-js-5433a9e32aa14de0ce0f.js.map
