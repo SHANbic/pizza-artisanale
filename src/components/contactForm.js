@@ -13,7 +13,7 @@ const ContactForm = () => {
   return (
     <form onSubmit={_handleSubmit}>
       {subscriptionStatus === "success" ? (
-        <p>Merci de votre inscription ! A bientôt</p>
+        <p className="success-message">Merci de votre inscription ! A bientôt!</p>
       ) : (
         <>
           <p>Ne manquez rien de notre actualité</p>

@@ -13,6 +13,16 @@ form {
       display: block;
       font-size: $sm-size;
       color: $golden;
+      margin-bottom: 5px;
+    }
+  }
+  .success-message {
+    font-size: $l-size;
+    @media screen and (max-width: $md-screen) {
+      font-size: $ml-size;
+    }
+    @media screen and (max-width: $sm-screen) {
+      font-size: 22px;
     }
   }
   @media screen and (max-width: $sm-screen) {
@@ -36,8 +46,12 @@ form {
       -webkit-appearance: none;
       -moz-appearance: none;
       appearance: none;
+      background-color: whitesmoke;
+      border-left: 1px solid grey;
     }
     padding: 10px;
+    border-radius: 1px;
+    border: none;
     @media screen and (max-width: $md-screen) {
       padding: 2px 10px;
       font-size: $sm-size;
