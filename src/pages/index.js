@@ -1,52 +1,39 @@
-import React, { useState } from "react"
-import addToMailchimp from "gatsby-plugin-mailchimp"
+import React, { useState, useEffect } from "react"
 import Layout from "../components/layout"
 import SEO from "../components/seo"
 import { graphql } from "gatsby"
 import Img from "gatsby-image"
 import Menu from "../components/menu/menu"
-import Instagram from "../components/instagram"
+//import Instagram from "../components/instagram"
 import GoogleMap from "../components/googleMap"
 
 const IndexPage = ({ data }) => {
-  const [email, setEmail] = useState("")
-  const _handleSubmit = async e => {
-    e.preventDefault()
-    const result = await addToMailchimp(email)
-    console.log(result)
-    // I recommend setting `result` to React state
-    // but you can do whatever you want
-  }
-
-  let { isClosed } = data.contentfulRestaurant
-  const openHours = [
-    [
-      [0, 0],
-      [18.25, 21],
-    ],
-    [
-      [11, 14.5],
-      [18.25, 21],
-    ],
-  ]
-  const isRestaurantNowOpen = () => {
+  const [isOpen, setIsOpen] = useState(true)
+  useEffect(() => {
+    let { isClosed } = data.contentfulRestaurant
+    const openHours = [
+      [
+        [0, 0],
+        [18.25, 21],
+      ],
+      [
+        [11, 14.5],
+        [18.25, 21],
+      ],
+    ]
     if (!isClosed) {
       const now = new Date()
       const day = now.getDay()
       const hours = now.getHours()
       const minutes = now.getMinutes()
-      const intTime = parseFloat(hours + (minutes / 60) * 10)
-      if (day === 0) {
-        return openHours[0].some(
+      const intTime = parseFloat(hours + (minutes / 60))
+      setIsOpen(
+        openHours[day === 0 ? 0 : 1].some(
           opening => opening[0] <= intTime && intTime <= opening[1]
         )
-      } else {
-        return openHours[1].some(
-          opening => opening[0] <= intTime && intTime <= opening[1]
-        )
-      }
+      )
     }
-  }
+  }, [])
 
   return (
     <Layout>
@@ -59,12 +46,8 @@ const IndexPage = ({ data }) => {
           />
           <div className="open">
             <p>
-              <span
-                className={`pulse-button ${
-                  isRestaurantNowOpen() ? "green" : "red"
-                }`}
-              />
-              {isRestaurantNowOpen() ? "ouvert" : "fermé"}
+              <span className={`pulse-button ${isOpen ? "green" : "red"}`} />
+              {isOpen ? "ouvert" : "fermé"}
             </p>
             <p>
               <a href="tel:0782178257">07 82 17 82 57</a>
@@ -105,18 +88,14 @@ const IndexPage = ({ data }) => {
       </section>
       <div className="advertising">
         <p>du lundi au samedi</p>
-        <p>11H00 - 14h30 / 18h15 - 21h30</p>
+        <p>11H00 - 14h30 / 18h15 - 21h00</p>
         <p>
           <a href="tel:0782178257">07 82 17 82 57</a>
         </p>
       </div>
       <section className="container">
         <Menu />
-        <Instagram />
-        <form onSubmit={_handleSubmit}>
-          <input type="email" onChange={e => setEmail(e.target.value)} />
-          <input type="submit" onClick={_handleSubmit} />
-        </form>
+        {/* <Instagram /> */}
       </section>
       {typeof window !== "undefined" && <GoogleMap />}
     </Layout>
