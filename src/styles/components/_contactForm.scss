@@ -33,6 +33,9 @@ form {
     }
     &[type="submit"] {
       flex-grow: 1;
+      -webkit-appearance: none;
+      -moz-appearance: none;
+      appearance: none;
     }
     padding: 10px;
     @media screen and (max-width: $md-screen) {
