@@ -1,5 +1,5 @@
-import React from "react"
-
+import React, { useState } from "react"
+import addToMailchimp from "gatsby-plugin-mailchimp"
 import Layout from "../components/layout"
 import SEO from "../components/seo"
 import { graphql } from "gatsby"
@@ -9,6 +9,15 @@ import Instagram from "../components/instagram"
 import GoogleMap from "../components/googleMap"
 
 const IndexPage = ({ data }) => {
+  const [email, setEmail] = useState("")
+  const _handleSubmit = async e => {
+    e.preventDefault()
+    const result = await addToMailchimp(email)
+    console.log(result)
+    // I recommend setting `result` to React state
+    // but you can do whatever you want
+  }
+
   let { isClosed } = data.contentfulRestaurant
   const openHours = [
     [
@@ -104,6 +113,10 @@ const IndexPage = ({ data }) => {
       <section className="container">
         <Menu />
         <Instagram />
+        <form onSubmit={_handleSubmit}>
+          <input type="email" onChange={e => setEmail(e.target.value)} />
+          <input type="submit" onClick={_handleSubmit} />
+        </form>
       </section>
       {typeof window !== "undefined" && <GoogleMap />}
     </Layout>

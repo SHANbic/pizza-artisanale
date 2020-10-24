@@ -68,6 +68,13 @@ module.exports = {
       },
     },
     {
+      resolve: `gatsby-plugin-mailchimp`,
+      options: {
+        endpoint: 'https://gmail.us2.list-manage.com/subscribe/post?u=496869b99ea948b923a2301d7&amp;id=72f6a59e02',
+        timeout: 3500
+      }
+    },
+    {
       resolve: `gatsby-source-instagram`,
       options: {
         username: `pizzaartisanale`,
