@@ -14,7 +14,7 @@ const IndexPage = ({ data }) => {
     const openHours = [
       [
         [0, 0],
-        [12, 21],
+        [18.25, 21],
       ],
       [
         [11, 14.5],
@@ -37,11 +37,11 @@ const IndexPage = ({ data }) => {
 
   return (
     <Layout>
-      <SEO title='Pizza Artisanale 77'/>
+      <SEO title='Pizza Artisanale 77 - Melun - Vert Saint Denis'/>
       <section className="hero">
         <div className="logo">
           <img
-            src={require("../images/logo.jpg")}
+            src={require("../images/logo-pizza-artisanale.jpg")}
             alt="logo de pizza artisanale"
           />
           <div className="open">
@@ -61,7 +61,7 @@ const IndexPage = ({ data }) => {
         <div className="title">
           <h1>
             Pizzas artisanales 100% maison,<br />
-            les meilleures de la région Melun - Vert Saint Denis
+            les meilleures de la région Melun - Vert Saint Denis (77)
           </h1>
         </div>
       </section>
@@ -80,7 +80,7 @@ const IndexPage = ({ data }) => {
           <div className="about-image">
             <Img
               title="le chef au travail"
-              alt="le chef au travail"
+              alt="le chef de pizza artisanale au travail"
               fluid={data.photo1.childImageSharp.fluid}
             />
           </div>
@@ -104,13 +104,13 @@ const IndexPage = ({ data }) => {
 
 export const pageQuery = graphql`
   query {
-    pizzaHero: file(relativePath: { eq: "pizza-hero-min.jpg" }) {
+    pizzaHero: file(relativePath: { eq: "pizza-artisanale-hero-min.jpg" }) {
       ...fluidImage
     }
-    photo1: file(relativePath: { eq: "photo-1.jpg" }) {
+    photo1: file(relativePath: { eq: "photo-chef-pizza-artisanale-min.jpg" }) {
       ...fluidImage
     }
-    logo: file(relativePath: { eq: "logo.jpg" }) {
+    logo: file(relativePath: { eq: "logo-pizza-artisanale.jpg" }) {
       ...fluidImage
     }
     contentfulRestaurant {

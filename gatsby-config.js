@@ -2,8 +2,8 @@ require("dotenv").config()
 
 module.exports = {
   siteMetadata: {
-    title: `pizza artisanale 77`,
-    description: `Les meilleures pizzas artisanales sur Melun - Vert Saint Denis, 77 Seine et Marne`,
+    title: `Pizza Artisanale 77 - Melun - Vert Saint Denis`,
+    description: `Dégustez les meilleures pizzas artisanales sur Melun - Vert Saint Denis - Cesson - Dammarye-lès-Lys, Voisenon - 77, Seine et Marne `,
     author: `Pierre Lambert`,
     author_website: "https://github.com/shanbic",
   },
@@ -57,7 +57,7 @@ module.exports = {
         background_color: `#663399`,
         theme_color: `#663399`,
         display: `minimal-ui`,
-        icon: `src/images/logo.jpg`, // This path is relative to the root of the site.
+        icon: `src/images/logo-pizza-artisanale.jpg`, // This path is relative to the root of the site.
       },
     },
     {

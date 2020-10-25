@@ -9,7 +9,7 @@ const Header = () => {
       {/*  <span>{props.siteTitle}</span> */}
       {/* <img
         className="icon"
-        src={require("../images/logo.jpg")}
+        src={require("../images/logo-pizza-artisanale.jpg")}
         alt="like icon"
       /> */}
       {/* <span>65 Park Row, EH1 4PE</span> */}

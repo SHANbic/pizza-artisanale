@@ -147,7 +147,7 @@ input {
         font-size: $l-size;
       }
       @media screen and (max-width: $sm-screen) {
-        font-size: 28px;
+        font-size: $ml-size;
         padding: 0 10px;
       }
       /* @media screen and (max-width: $xs-screen) {

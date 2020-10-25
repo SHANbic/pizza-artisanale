@@ -49,6 +49,9 @@ footer {
       @media screen and (min-width: $md-screen) {
         font-size: $ml-size;
       }
+      @media screen and (min-width: $sm-screen) {
+        font-size: $ms-size;
+      }
     }
     div {
       display: flex;
