@@ -14,7 +14,7 @@ const IndexPage = ({ data }) => {
     const openHours = [
       [
         [0, 0],
-        [18.25, 21],
+        [12, 21],
       ],
       [
         [11, 14.5],
