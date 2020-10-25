@@ -21,7 +21,7 @@ const Menu = () => {
 
   return (
     <section className="menu">
-      <h2>La carte</h2>
+      <h2>La carte <a href={require('../../images/carte.jpg')}>(au format image ici)</a></h2>
       <ul className="menu-headers">
         <li
           className={`menu-header ${menuCategory === "menus" ? "active" : ""}`}

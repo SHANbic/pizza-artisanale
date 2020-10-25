@@ -8,6 +8,12 @@ module.exports = {
     author_website: "https://github.com/shanbic",
   },
   plugins: [
+    `gatsby-plugin-react-helmet`,
+    `gatsby-transformer-sharp`,
+    `gatsby-plugin-sharp`,
+    `gatsby-plugin-offline`,
+    `gatsby-source-fontawesome`,
+    `gatsby-plugin-sass`,
     {
       resolve: `gatsby-plugin-prefetch-google-fonts`,
       options: {
@@ -42,16 +48,11 @@ module.exports = {
         path: `${__dirname}/src/images`,
       },
     },
-    `gatsby-plugin-react-helmet`,
-    `gatsby-transformer-sharp`,
-    `gatsby-plugin-sharp`,
-    `gatsby-plugin-offline`,
-    `gatsby-source-fontawesome`,
     {
       resolve: `gatsby-plugin-manifest`,
       options: {
-        name: `gatsby-starter-default`,
-        short_name: `starter`,
+        name: `Pizza Artisanale`,
+        short_name: `Pizza Artisanale`,
         start_url: `/`,
         background_color: `#663399`,
         theme_color: `#663399`,
@@ -59,7 +60,6 @@ module.exports = {
         icon: `src/images/logo.jpg`, // This path is relative to the root of the site.
       },
     },
-    `gatsby-plugin-sass`,
     {
       resolve: `gatsby-source-contentful`,
       options: {

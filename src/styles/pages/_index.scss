@@ -30,7 +30,7 @@ input {
   font-weight: light;
   margin-right: 8px;
   border-radius: 50%;
-  cursor: pointer;
+
   animation: pulse 1s infinite;
   &.green {
     background: limegreen;
@@ -49,6 +49,9 @@ input {
 
 .hero {
   position: relative;
+  &-image {
+    max-height: 100vh;
+  }
   .open {
     position: absolute;
     width: 50%;
@@ -127,7 +130,7 @@ input {
     justify-content: center;
     height: 100%;
     h1 {
-      font-family: "Fredericka the Great";
+      font-family: Fredericka the Great, Verdana, Geneva, Tahoma, sans-serif;
       font-size: $xxxl-size;
       text-align: center;
       color: $light-text;
@@ -144,7 +147,7 @@ input {
         font-size: $l-size;
       }
       @media screen and (max-width: $sm-screen) {
-        font-size: $ml-size;
+        font-size: 28px;
         padding: 0 10px;
       }
       /* @media screen and (max-width: $xs-screen) {
@@ -238,7 +241,7 @@ h2 {
 
   .title {
     text-align: center;
-    font-family: "Comic Neue";
+    font-family: "Comic Neue", Verdana, Geneva, Tahoma, sans-serif;
     font-size: $ml-size;
     color: $light-text;
     padding: 30px 30px;
@@ -306,11 +309,11 @@ h2 {
       color: $light-text;
       p {
         margin-bottom: 0;
-        font-family: "Raleway";
+        font-family: Raleway, Verdana, Geneva, Tahoma, sans-serif;
         font-size: $ms-size;
       }
       h2 {
-        font-family: "Tangerine";
+        font-family: Tangerine, Verdana, Geneva, Tahoma, sans-serif;
         font-size: $xxxl-size;
         color: $golden;
       }
@@ -349,10 +352,10 @@ h2 {
     @media screen and (max-width: $sm-screen) {
       &-text {
         p {
-          font-size: $s-size;
+          font-size: 14px;
         }
         h2 {
-          font-size: $xl-size;
+          font-size: 50px;
         }
       }
     }

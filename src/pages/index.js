@@ -37,7 +37,7 @@ const IndexPage = ({ data }) => {
 
   return (
     <Layout>
-      <SEO />
+      <SEO title='Pizza Artisanale 77'/>
       <section className="hero">
         <div className="logo">
           <img
@@ -60,7 +60,7 @@ const IndexPage = ({ data }) => {
         />
         <div className="title">
           <h1>
-            Pizzas artisanales 100% maison, <br />
+            Pizzas artisanales 100% maison,<br />
             les meilleures de la région Melun - Vert Saint Denis
           </h1>
         </div>
