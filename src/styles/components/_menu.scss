@@ -1,6 +1,7 @@
 .menu {
   color: $light-text;
   margin-bottom: 50px;
+  margin-top: 1rem;
   h2 {
     color: $light-text;
     font-family: Tangerine, Verdana, Geneva, Tahoma, sans-serif;
@@ -24,20 +25,20 @@
   .menu-headers {
     display: flex;
     list-style-type: none;
-    margin-left: 0;
-    justify-content: space-between;
+    margin: 0.5rem 0 1rem;
+    gap: 30px;
+    justify-content: flex-start;
 
-    @media screen and (min-width: $sm-screen) {
-      justify-content: flex-start;
-      .menu-header:nth-child(n + 2) {
-        margin-left: 20px;
-      }
+    @media screen and (max-width: $sm-screen) {
+      justify-content: space-between;
+      padding: 0 5px;
+      gap: 0;
     }
     .menu-header {
       cursor: pointer;
       font-size: $sm-size;
       padding: 0;
-      margin-bottom: 1rem;
+      margin-bottom: 0;
       line-height: 20px;
       &.active {
         color: $golden;
@@ -66,6 +67,9 @@
       font-family: Fredericka the Great, Verdana, Geneva, Tahoma, sans-serif;
       position: relative;
       margin-bottom: 0;
+      @media screen and (max-width: $sm-screen) {
+        padding-left: 5px;
+      }
 
       h3 {
         color: $light-text;
@@ -74,6 +78,14 @@
         margin-bottom: 0;
         text-transform: uppercase;
         font-family: Fredericka the Great, Verdana, Geneva, Tahoma, sans-serif;
+      }
+      @media screen and (max-width: $sm-screen) {
+        h3 {
+          font-size: $m-size;
+        }
+        p {
+          font-size: $sm-size;
+        }
       }
 
       .price {
@@ -90,12 +102,76 @@
         align-items: center;
         z-index: 10;
         transform: rotate(5deg);
+        @media screen and (max-width: $sm-screen) {
+          width: 35px;
+          height: 35px;
+        }
       }
 
       & .image-wrapper {
         width: 280px;
         height: 280px;
         overflow: hidden;
+      }
+    }
+  }
+}
+
+.partners {
+  max-width: 800px;
+  margin: 75px auto 25px;
+  padding: 30px 15px;
+  background-color: rgba(0, 0, 0, 0.4);
+  border-radius: 2px;
+  strong {
+    text-align: center;
+    font-size: $ml-size;
+    width: 100%;
+    display: block;
+    font-weight: normal;
+    font-style: italic;
+    margin-bottom: 15px;
+  }
+  div {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 25px;
+    div {
+      display: flex;
+      justify-content: space-between;
+      gap: 25px;
+    }
+  }
+
+  .logo-wrapper {
+    height: 40px;
+    img {
+      height: 100%;
+      margin-bottom: 0;
+    }
+    &.facebook img {
+      border-radius: 3px;
+    }
+    &.instagram img {
+      border-radius: 10px;
+    }
+  }
+
+  @media (max-width: $md-screen) {
+    strong {
+      font-size: $ms-size;
+    }
+  }
+  @media (max-width: $sm-screen) {
+    padding: 10px 5px;
+    strong {
+      font-size: $sm-size;
+    }
+    div {
+      gap: 15px;
+      div {
+        gap: 15px;
       }
     }
   }

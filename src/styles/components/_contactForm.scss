@@ -5,7 +5,7 @@ form {
   padding: 0px 30px;
   p {
     font-size: $l-size;
-    margin: 0;
+    margin: 0 0 10px;
     @media screen and (max-width: $md-screen) {
       font-size: $m-size;
     }

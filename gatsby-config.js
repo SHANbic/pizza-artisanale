@@ -12,30 +12,17 @@ module.exports = {
     `gatsby-transformer-sharp`,
     `gatsby-plugin-sharp`,
     `gatsby-plugin-offline`,
-    `gatsby-source-fontawesome`,
     `gatsby-plugin-sass`,
     {
       resolve: `gatsby-plugin-prefetch-google-fonts`,
       options: {
         fonts: [
           {
-            family: `Comic Neue`,
-            variants: [`400`, `700`],
-          },
-          {
             family: `Fredericka the Great`,
             variants: [`400`],
           },
           {
             family: `Tangerine`,
-            variants: [`400`],
-          },
-          {
-            family: `Roboto`,
-            variants: [`400`],
-          },
-          {
-            family: `Open Sans`,
             variants: [`400`],
           },
         ],
@@ -70,21 +57,22 @@ module.exports = {
     {
       resolve: `gatsby-plugin-mailchimp`,
       options: {
-        endpoint: 'https://gmail.us2.list-manage.com/subscribe/post?u=496869b99ea948b923a2301d7&amp;id=72f6a59e02',
-        timeout: 3500
-      }
+        endpoint:
+          "https://gmail.us2.list-manage.com/subscribe/post?u=496869b99ea948b923a2301d7&amp;id=72f6a59e02",
+        timeout: 3500,
+      },
     },
-    {
+    /* {
       resolve: `gatsby-source-instagram`,
       options: {
         username: `pizzaartisanale`,
       },
-    },
+    }, */
     {
       resolve: `gatsby-plugin-typography`,
       options: {
         pathToConfigModule: `src/utils/typography`,
       },
-    }
+    },
   ],
 }

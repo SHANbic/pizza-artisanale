@@ -29,7 +29,7 @@ const Menus = () => {
               <h3>
                 {node.name}
                 <span className="price" style={{ marginLeft: "20px" }}>
-                  {(node.price || 17)}€
+                  {node.price || 17}€
                 </span>
               </h3>
               <p>{node.description.description}</p>

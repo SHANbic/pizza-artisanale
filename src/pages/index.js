@@ -9,8 +9,9 @@ import GoogleMap from "../components/googleMap"
 
 const IndexPage = ({ data }) => {
   const [isOpen, setIsOpen] = useState(true)
+  const [hasLoaded, setHasLoaded] = useState(false)
+  let { isClosed, pizzaHero, photo1 } = data
   useEffect(() => {
-    let { isClosed } = data.contentfulRestaurant
     const openHours = [
       [
         [0, 0],
@@ -26,18 +27,19 @@ const IndexPage = ({ data }) => {
       const day = now.getDay()
       const hours = now.getHours()
       const minutes = now.getMinutes()
-      const intTime = parseFloat(hours + (minutes / 60))
+      const intTime = parseFloat(hours + minutes / 60)
       setIsOpen(
         openHours[day === 0 ? 0 : 1].some(
           opening => opening[0] <= intTime && intTime <= opening[1]
         )
       )
     }
-  }, [])
+    setHasLoaded(true)
+  }, [data.contentfulRestaurant])
 
   return (
     <Layout>
-      <SEO title='Pizza Artisanale 77 - Melun - Vert Saint Denis'/>
+      <SEO title="Pizza Artisanale 77 - Melun - Vert Saint Denis" />
       <section className="hero">
         <div className="logo">
           <img
@@ -45,22 +47,22 @@ const IndexPage = ({ data }) => {
             alt="logo de pizza artisanale"
           />
           <div className="open">
-            <p>
-              <span className={`pulse-button ${isOpen ? "green" : "red"}`} />
-              {isOpen ? "ouvert" : "fermé"}
-            </p>
+            {hasLoaded && (
+              <p>
+                <span className={`pulse-button ${isOpen ? "green" : "red"}`} />
+                {isOpen ? "ouvert" : "fermé"}
+              </p>
+            )}
             <p>
               <a href="tel:0782178257">07 82 17 82 57</a>
             </p>
           </div>
         </div>
-        <Img
-          fluid={data.pizzaHero.childImageSharp.fluid}
-          className="hero-image"
-        />
+        <Img fluid={pizzaHero.childImageSharp.fluid} className="hero-image" />
         <div className="title">
           <h1>
-            Pizzas artisanales 100% maison,<br />
+            Pizzas artisanales 100% maison,
+            <br />
             les meilleures de la région Melun - Vert Saint Denis (77)
           </h1>
         </div>
@@ -81,7 +83,7 @@ const IndexPage = ({ data }) => {
             <Img
               title="le chef au travail"
               alt="le chef de pizza artisanale au travail"
-              fluid={data.photo1.childImageSharp.fluid}
+              fluid={photo1.childImageSharp.fluid}
             />
           </div>
         </div>

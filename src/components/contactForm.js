@@ -13,17 +13,25 @@ const ContactForm = () => {
   return (
     <form onSubmit={_handleSubmit}>
       {subscriptionStatus === "success" ? (
-        <p className="success-message">Merci de votre inscription ! A bientôt!</p>
+        <p className="success-message">
+          Merci de votre inscription ! A bientôt!
+        </p>
       ) : (
         <>
           <p>Ne manquez rien de notre actualité</p>
           {subscriptionStatus === "error" && (
             <p className="error">
-              Une erreur est survenue. Votre mail est peut-être déjà renseigné ou son format n'est pas valide
+              Une erreur est survenue. Votre mail est peut-être déjà renseigné
+              ou son format n'est pas valide
             </p>
           )}
           <div className="subscription-bar">
-            <input type="email" onChange={e => setEmail(e.target.value)} />
+            <label for="email"></label>
+            <input
+              id="email"
+              type="email"
+              onChange={e => setEmail(e.target.value)}
+            />
             <input
               type="submit"
               onClick={_handleSubmit}

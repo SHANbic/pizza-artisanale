@@ -30,8 +30,10 @@ input {
   font-weight: light;
   margin-right: 8px;
   border-radius: 50%;
-
   animation: pulse 1s infinite;
+  -moz-animation: pulse 1s infinite;
+  -webkit-animation: pulse 1s infinite;
+  -o-animation: pulse 1s infinite;
   &.green {
     background: limegreen;
     box-shadow: 0 0 0 0 rgba(limegreen, 0.5);
@@ -130,7 +132,7 @@ input {
     justify-content: center;
     height: 100%;
     h1 {
-      font-family: Fredericka the Great, Verdana, Geneva, Tahoma, sans-serif;
+      font-family: 'Fredericka the Great', Verdana, Geneva, Tahoma, sans-serif;
       font-size: $xxxl-size;
       text-align: center;
       color: $light-text;
@@ -148,7 +150,7 @@ input {
       }
       @media screen and (max-width: $sm-screen) {
         font-size: $ml-size;
-        padding: 0 10px;
+        padding: 25px 10px 0;
       }
       /* @media screen and (max-width: $xs-screen) {
         font-size: $ml-size;
@@ -238,13 +240,15 @@ h2 {
   flex-direction: column;
   margin: 0 auto;
   background: url("../images/blackboard-min.jpg");
+  @media screen and (max-width: $sm-screen) {
+    padding: 20px 5px;
+  }
 
   .title {
     text-align: center;
-    font-family: "Comic Neue", Verdana, Geneva, Tahoma, sans-serif;
     font-size: $ml-size;
     color: $light-text;
-    padding: 30px 30px;
+    padding: 30px;
     @media screen and (min-width: 768px) {
       padding: 40px 50px;
       font-size: $l-size;
@@ -254,48 +258,6 @@ h2 {
       font-size: $xl-size;
     }
   }
-  /* .gallery-grid {
-    img {
-      border-radius: 5px;
-    }
-    display: grid;
-    justify-content: center;
-    grid-template-areas:
-      "img1"
-      "img2"
-      "img3";
-    grid-template-columns: 300px;
-    grid-template-rows: repeat(3, 250px);
-    gap: 20px;
-    img {
-      box-shadow: 10px 10px 10px white;
-    }
-    @media screen and (min-width: 640px) {
-      grid-template-areas:
-        "img1 img3"
-        "img2 img3";
-      grid-template-columns: 1fr 1.5fr;
-      grid-template-rows: repeat(2, 300px);
-    }
-    .gallery-img1 {
-      width: 100%;
-      height: 100%;
-      object-fit: cover;
-      grid-area: img1;
-    }
-    .gallery-img2 {
-      width: 100%;
-      height: 100%;
-      object-fit: cover;
-      grid-area: img2;
-    }
-    .gallery-img3 {
-      width: 100%;
-      height: 100%;
-      object-fit: cover;
-      grid-area: img3;
-    }
-  } */
   .about {
     display: flex;
     align-items: center;
@@ -359,17 +321,5 @@ h2 {
         }
       }
     }
-  }
-}
-.parallax {
-  background-image: url("");
-  background-attachment: fixed;
-  background-position: 60% 50%;
-  background-repeat: no-repeat;
-  background-size: cover;
-  height: 200px;
-  margin: 80px 0;
-  @media screen and (min-width: 1024px) {
-    height: 400px;
   }
 }

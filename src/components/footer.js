@@ -16,18 +16,24 @@ const Footer = () => {
         </div>
         <div className="hours">
           <h3>Heures d'ouvertures</h3>
-          <span>lundi - samedi : 11:00 - 14:30, 18:15 - 21:00</span>
-          <span>dimanche : 18:15 - 21:00</span>
+          <span>lundi - samedi : 11h - 14h30, 18h15 - 21h</span>
+          <span>dimanche : 18h15 - 21h</span>
         </div>
         <div className="contact">
           <h3>Nous contacter</h3>
-          <a href="tel:0782178257">tél : 07 82 17 82 57</a>
+          <a href="tel:0782178257">07 82 17 82 57</a>
           <a
-            href="https://www.instagram.com/pizzaartisanale/"
+            href="https://www.facebook.com/julienavzd/"
             target="_blank"
             rel="noreferrer"
           >
-            @pizzaartisanale
+            <span className="facebook-logo">
+              <img
+                src={require("../images/facebook-logo.jpg")}
+                alt="logo facebook"
+              />
+              Pizza artisanale
+            </span>
           </a>
         </div>
       </section>
