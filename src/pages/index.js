@@ -47,12 +47,15 @@ const IndexPage = ({ data }) => {
             alt="logo de pizza artisanale"
           />
           <div className="open">
-            {hasLoaded && (
-              <p>
+            <p>
+              {hasLoaded && (
                 <span className={`pulse-button ${isOpen ? "green" : "red"}`} />
+              )}
+              <span style={{ visibility: hasLoaded ? "visible" : "hidden" }}>
                 {isOpen ? "ouvert" : "fermé"}
-              </p>
-            )}
+              </span>
+            </p>
+
             <p>
               <a href="tel:0782178257">07 82 17 82 57</a>
             </p>

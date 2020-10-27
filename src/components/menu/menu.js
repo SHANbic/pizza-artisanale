@@ -68,8 +68,8 @@ const Menu = ({ partners }) => {
       <SelectedCategory />
       <div className="partners">
         <strong>Pizza Artisanale au service de ses clients</strong>
-        <div>
-          <div>
+        <div className="grid">
+          <div className="grid-elem">
             <div className="logo-wrapper">
               <img src={require("../../images/cb-logo.jpg")} alt="logo cb" />
             </div>
@@ -80,7 +80,7 @@ const Menu = ({ partners }) => {
               />
             </div>
           </div>
-          <div>
+          <div className="grid-elem">
             <a href="https://www.ubereats.com/paris/food-delivery/pizza-artisanale/nVi1DyjPS96IWpvfUcmhWw?pl=JTdCJTIyYWRkcmVzcyUyMiUzQSUyMjI1JTIwUm91dGUlMjBEJUMzJUE5cGFydGVtZW50YWxlJTIwMzA2JTIyJTJDJTIycmVmZXJlbmNlJTIyJTNBJTIyQ2hJSlZkVWswLWY2NVVjUmN2ckRselZwZ0FZJTIyJTJDJTIycmVmZXJlbmNlVHlwZSUyMiUzQSUyMmdvb2dsZV9wbGFjZXMlMjIlMkMlMjJsYXRpdHVkZSUyMiUzQTQ4LjU1OTI5OCUyQyUyMmxvbmdpdHVkZSUyMiUzQTIuNjM1MzQzMSU3RA%3D%3D">
               <div className="logo-wrapper">
                 <img

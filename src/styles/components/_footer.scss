@@ -85,7 +85,6 @@ footer {
   .facebook-logo {
     display: flex;
     align-items: center;
-    gap: 0 5px;
     img {
       position: relative;
       top: -1px;
@@ -93,6 +92,7 @@ footer {
       width: 15px;
       border-radius: 3px;
       margin-bottom: 0;
+      margin-right: 5px;
       @media screen and (max-width: $sm-screen) {
         top: -2px;
       }

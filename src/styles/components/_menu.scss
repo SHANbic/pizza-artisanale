@@ -120,7 +120,7 @@
 .partners {
   max-width: 800px;
   margin: 75px auto 25px;
-  padding: 30px 15px;
+  padding: 30px 0;
   background-color: rgba(0, 0, 0, 0.4);
   border-radius: 2px;
   strong {
@@ -132,15 +132,21 @@
     font-style: italic;
     margin-bottom: 15px;
   }
-  div {
-    display: flex;
-    justify-content: center;
-    flex-wrap: wrap;
-    gap: 25px;
-    div {
+  .grid {
+    display: grid;
+    transform: translateX(-10px);
+    grid-template-columns: 1fr 1fr;
+    &-elem {
       display: flex;
-      justify-content: space-between;
-      gap: 25px;
+      & .logo-wrapper {
+        margin: 0 10px;
+      }
+      &:first-child {
+        justify-content: flex-end;
+      }
+      &:last-child {
+        justify-content: flex-start;
+      }
     }
   }
 
@@ -162,16 +168,26 @@
     strong {
       font-size: $ms-size;
     }
+    .grid {
+      transform: translateX(-5px);
+    }
   }
   @media (max-width: $sm-screen) {
     padding: 10px 5px;
     strong {
       font-size: $sm-size;
     }
-    div {
-      gap: 15px;
-      div {
-        gap: 15px;
+    .grid {
+      gap: 20px 0;
+      transform: translateX(0px);
+      grid-template-columns: none;
+      grid-template-rows: 1fr 1fr;
+      &-elem:first-child,
+      &-elem:last-child {
+        justify-content: center;
+        & .logo-wrapper {
+          margin: 0 10px;
+        }
       }
     }
   }
