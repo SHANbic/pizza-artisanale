@@ -81,7 +81,11 @@ const Menu = ({ partners }) => {
             </div>
           </div>
           <div className="grid-elem">
-            <a href="https://www.ubereats.com/paris/food-delivery/pizza-artisanale/nVi1DyjPS96IWpvfUcmhWw?pl=JTdCJTIyYWRkcmVzcyUyMiUzQSUyMjI1JTIwUm91dGUlMjBEJUMzJUE5cGFydGVtZW50YWxlJTIwMzA2JTIyJTJDJTIycmVmZXJlbmNlJTIyJTNBJTIyQ2hJSlZkVWswLWY2NVVjUmN2ckRselZwZ0FZJTIyJTJDJTIycmVmZXJlbmNlVHlwZSUyMiUzQSUyMmdvb2dsZV9wbGFjZXMlMjIlMkMlMjJsYXRpdHVkZSUyMiUzQTQ4LjU1OTI5OCUyQyUyMmxvbmdpdHVkZSUyMiUzQTIuNjM1MzQzMSU3RA%3D%3D">
+            <a
+              href="https://www.ubereats.com/paris/food-delivery/pizza-artisanale/nVi1DyjPS96IWpvfUcmhWw?pl=JTdCJTIyYWRkcmVzcyUyMiUzQSUyMjI1JTIwUm91dGUlMjBEJUMzJUE5cGFydGVtZW50YWxlJTIwMzA2JTIyJTJDJTIycmVmZXJlbmNlJTIyJTNBJTIyQ2hJSlZkVWswLWY2NVVjUmN2ckRselZwZ0FZJTIyJTJDJTIycmVmZXJlbmNlVHlwZSUyMiUzQSUyMmdvb2dsZV9wbGFjZXMlMjIlMkMlMjJsYXRpdHVkZSUyMiUzQTQ4LjU1OTI5OCUyQyUyMmxvbmdpdHVkZSUyMiUzQTIuNjM1MzQzMSU3RA%3D%3D"
+              target="_blank"
+              rel="noreferrer"
+            >
               <div className="logo-wrapper">
                 <img
                   src={require("../../images/uber-eats-logo.jpg")}
@@ -90,7 +94,11 @@ const Menu = ({ partners }) => {
                 />
               </div>
             </a>
-            <a href="https://www.ubereats.com/paris/food-delivery/pizza-artisanale/nVi1DyjPS96IWpvfUcmhWw?pl=JTdCJTIyYWRkcmVzcyUyMiUzQSUyMjI1JTIwUm91dGUlMjBEJUMzJUE5cGFydGVtZW50YWxlJTIwMzA2JTIyJTJDJTIycmVmZXJlbmNlJTIyJTNBJTIyQ2hJSlZkVWswLWY2NVVjUmN2ckRselZwZ0FZJTIyJTJDJTIycmVmZXJlbmNlVHlwZSUyMiUzQSUyMmdvb2dsZV9wbGFjZXMlMjIlMkMlMjJsYXRpdHVkZSUyMiUzQTQ4LjU1OTI5OCUyQyUyMmxvbmdpdHVkZSUyMiUzQTIuNjM1MzQzMSU3RA%3D%3D">
+            <a
+              href="https://www.ubereats.com/paris/food-delivery/pizza-artisanale/nVi1DyjPS96IWpvfUcmhWw?pl=JTdCJTIyYWRkcmVzcyUyMiUzQSUyMjI1JTIwUm91dGUlMjBEJUMzJUE5cGFydGVtZW50YWxlJTIwMzA2JTIyJTJDJTIycmVmZXJlbmNlJTIyJTNBJTIyQ2hJSlZkVWswLWY2NVVjUmN2ckRselZwZ0FZJTIyJTJDJTIycmVmZXJlbmNlVHlwZSUyMiUzQSUyMmdvb2dsZV9wbGFjZXMlMjIlMkMlMjJsYXRpdHVkZSUyMiUzQTQ4LjU1OTI5OCUyQyUyMmxvbmdpdHVkZSUyMiUzQTIuNjM1MzQzMSU3RA%3D%3D"
+              target="_blank"
+              rel="noreferrer"
+            >
               <div className="logo-wrapper">
                 <img
                   src={require("../../images/deliveroo-logo.jpg")}
@@ -99,7 +107,11 @@ const Menu = ({ partners }) => {
                 />
               </div>
             </a>
-            <a href="https://www.facebook.com/julienavzd">
+            <a
+              href="https://www.facebook.com/julienavzd"
+              target="_blank"
+              rel="noreferrer"
+            >
               <div className="logo-wrapper facebook">
                 <img
                   src={require("../../images/facebook-logo.jpg")}
@@ -108,7 +120,11 @@ const Menu = ({ partners }) => {
                 />
               </div>
             </a>
-            <a href="https://www.instagram.com/pizzaartisanale/">
+            <a
+              href="https://www.instagram.com/pizzaartisanale/"
+              target="_blank"
+              rel="noreferrer"
+            >
               <div className="logo-wrapper instagram">
                 <img
                   src={require("../../images/instagram-logo.jpg")}
