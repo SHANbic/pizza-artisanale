@@ -9,14 +9,10 @@ const typography = new Typography({
     {
       name: "Nunito",
       styles: ["400"],
-    },
-    {
-      name: "Raleway",
-      styles: ["400", "400i", "700", "700i"],
-    },
+    }
   ],
   headerFontFamily: ["Nunito", "sans-serif"],
-  bodyFontFamily: ["Raleway", "sans-serif"],
+  bodyFontFamily: ["Nunito", "sans-serif"],
   headerColor: "hsla(0,0%,0%,1)",
   bodyColor: "hsla(0,0%,0%,0.8)",
   headerWeight: 400,

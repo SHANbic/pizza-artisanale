@@ -9,6 +9,12 @@ input {
   }
 }
 
+body {
+  max-width: 1280px;
+  margin: 0 auto;
+  background-color: #111;
+}
+
 @keyframes pulse {
   0% {
     transform: scale(0.9);
@@ -132,7 +138,7 @@ input {
     justify-content: center;
     height: 100%;
     h1 {
-      font-family: 'Fredericka the Great', Verdana, Geneva, Tahoma, sans-serif;
+      font-family: "Fredericka the Great", Verdana, Geneva, Tahoma, sans-serif;
       font-size: $xxxl-size;
       text-align: center;
       color: $light-text;
@@ -271,7 +277,7 @@ h2 {
       color: $light-text;
       p {
         margin-bottom: 0;
-        font-family: Raleway, Verdana, Geneva, Tahoma, sans-serif;
+        font-family: Nunito, Verdana, Geneva, Tahoma, sans-serif;
         font-size: $ms-size;
       }
       h2 {
