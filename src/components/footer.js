@@ -16,8 +16,8 @@ const Footer = () => {
         </div>
         <div className="hours">
           <h3>Heures d'ouvertures</h3>
-          <span>lundi - samedi : 11h - 14h30, 18h15 - 21h</span>
-          <span>dimanche : 18h15 - 21h</span>
+          <span>lundi - samedi : 11h - 14h, 18h - 21h</span>
+          <span>dimanche : 18h - 21h</span>
         </div>
         <div className="contact">
           <h3>Nous contacter</h3>

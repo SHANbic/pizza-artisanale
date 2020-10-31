@@ -30,6 +30,7 @@ const ContactForm = () => {
             <input
               id="email"
               type="email"
+              placeholder="votre email"
               onChange={e => setEmail(e.target.value)}
             />
             <input

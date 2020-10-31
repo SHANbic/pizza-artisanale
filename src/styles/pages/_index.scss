@@ -93,14 +93,14 @@ body {
     @media screen and (max-width: $sm-screen) {
       text-indent: 60px;
       line-height: 2.1;
-      width: 160px;
+      width: 170px;
       font-size: $s-size;
       height: 30px;
       top: 16px;
       left: 3px;
       @supports (clip-path: polygon(0 0)) or (-webkit-clip-path: polygon(0 0)) {
         -webkit-clip-path: polygon(0 0, 100% 0, 100% 75vh, 0 100%);
-        clip-path: polygon(0 0, 130px 0, 160px 42px, 0 42px);
+        clip-path: polygon(0 0, 140px 0, 170px 42px, 0 42px);
       }
       p:first-child {
         top: -4px;
@@ -184,14 +184,14 @@ h2 {
   }
 }
 
-.advertising {
+.opening {
   background-color: #f6ef32;
   padding: 10px 0;
 
   p {
     color: $dark-text;
     font-weight: bold;
-    font-size: $l-size;
+    line-height: 1.1;
     text-align: center;
     margin-bottom: 0;
     text-transform: uppercase;
@@ -201,40 +201,40 @@ h2 {
     }
   }
 
-  p:nth-child(1) {
+  &-days {
     font-size: $xl-size;
   }
 
-  p:nth-child(2) {
+  &-hours {
     font-size: $ml-size;
   }
 
-  p:nth-child(3) {
+  &-phone {
     font-size: $xxl-size;
   }
   @media screen and (max-width: $sm-screen) {
-    p:nth-child(1) {
+    &-days {
       font-size: $l-size;
     }
 
-    p:nth-child(2) {
+    &-hours {
       font-size: $ms-size;
     }
 
-    p:nth-child(3) {
+    &-phone {
       font-size: $xl-size;
     }
   }
   @media screen and (max-width: $xs-screen) {
-    p:nth-child(1) {
+    &-days {
       font-size: $ml-size;
     }
 
-    p:nth-child(2) {
+    &-hours {
       font-size: $s-size;
     }
 
-    p:nth-child(3) {
+    &-phone {
       font-size: $l-size;
     }
   }

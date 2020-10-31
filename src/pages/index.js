@@ -15,11 +15,11 @@ const IndexPage = ({ data }) => {
     const openHours = [
       [
         [0, 0],
-        [18.25, 21],
+        [18, 21],
       ],
       [
-        [11, 14.5],
-        [18.25, 21],
+        [11, 14],
+        [18, 21],
       ],
     ]
     if (!isClosed) {
@@ -91,10 +91,14 @@ const IndexPage = ({ data }) => {
           </div>
         </div>
       </section>
-      <div className="advertising">
-        <p>du lundi au samedi</p>
-        <p>11H00 - 14h30 / 18h15 - 21h00</p>
-        <p>
+      <div className="opening">
+        <p className="opening-days">du lundi au samedi</p>
+        <p className="opening-hours">11H00 - 14h00 / 18h00 - 21h00</p>
+        <p className="opening-days" style={{ marginTop: "20px" }}>
+          le dimanche
+        </p>
+        <p className="opening-hours">18h00 - 21h00</p>
+        <p className="opening-phone" style={{ marginTop: "20px" }}>
           <a href="tel:0782178257">07 82 17 82 57</a>
         </p>
       </div>

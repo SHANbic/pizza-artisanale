@@ -118,7 +118,7 @@
 }
 
 .partners {
-  max-width: 800px;
+  max-width: 670px;
   margin: 75px auto 25px;
   padding: 30px 0;
   background-color: rgba(0, 0, 0, 0.4);
@@ -132,20 +132,16 @@
     font-style: italic;
     margin-bottom: 15px;
   }
-  .grid {
-    display: grid;
-    transform: translateX(-10px);
-    grid-template-columns: 1fr 1fr;
-    &-elem {
-      display: flex;
-      & .logo-wrapper {
-        margin: 0 10px;
-      }
-      &:first-child {
-        justify-content: flex-end;
-      }
-      &:last-child {
-        justify-content: flex-start;
+
+  > div {
+    margin: 0 auto;
+    width: 100%;
+    max-width: 470px;
+    text-align: center;
+    > * {
+      display: inline-block;
+      &:not(:last-child) {
+        margin-right: 30px;
       }
     }
   }
@@ -168,27 +164,14 @@
     strong {
       font-size: $ms-size;
     }
-    .grid {
-      transform: translateX(-5px);
-    }
   }
   @media (max-width: $sm-screen) {
     padding: 10px 5px;
     strong {
       font-size: $sm-size;
     }
-    .grid {
-      gap: 20px 0;
-      transform: translateX(0px);
-      grid-template-columns: none;
-      grid-template-rows: 1fr 1fr;
-      &-elem:first-child,
-      &-elem:last-child {
-        justify-content: center;
-        & .logo-wrapper {
-          margin: 0 10px;
-        }
-      }
+    > div > *:not(:last-child) {
+      margin-right: 10px;
     }
   }
 }
